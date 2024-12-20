@@ -31,13 +31,13 @@ def soletrar_palavra(palavra):
     falar(f"A palavra é: {palavra}")
     time.sleep(10)
     for letra in reversed(palavra):
-        falar(letra)
-        time.sleep(0.1)
+        falar(f"{letra} ")
+        time.sleep(0.05)
 
 # Loop principal
 palavras_disponiveis = palavras.copy()
 while palavras_disponiveis:
-    falar (f"Faltam {len(palavras_disponiveis)} palacras")
+    falar (f"Faltam {len(palavras_disponiveis)} palavras")
     palavra_sorteada = random.choice(palavras_disponiveis)
     soletrar_palavra(palavra_sorteada)
     palavras_disponiveis.remove(palavra_sorteada)
